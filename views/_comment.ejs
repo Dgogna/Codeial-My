@@ -1,0 +1,15 @@
+<li class="lh-1 mb-2">
+    <%if((locals.user) && (locals.user.id==comment.user.id)){%>
+        <small>
+            <a href="/comments/destroy/<%=comment.id%>">del</a>
+        </small>
+    <%}%>
+    <%=comment.content%>
+    <br>
+    <span>
+        <small>
+            by- <%=comment.user.name%>
+        </small>
+    </span>
+    
+</li>

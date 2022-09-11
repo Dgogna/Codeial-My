@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+<!-- <h1>
+    Codeial / Profile Page
+</h1>
+
+<p><%= user.name %></p>
+<p><%= user.email %></p> -->
+<!-- <div id="main_card">
+    <h1>Profile Page</h1>
+    
+</div> -->
+        
+<img src="<%=user.avatar%>" alt="<%=user.name%>" height="300" width="300">
+
+<%if(user.id == profile_user.id){%>
+<!-- if user matches then show the form -->
+
+    <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="post">
+        <input type="text" name="name" placeholder="Your Name" value="<%=profile_user.name%>" required>
+        <input type="email" name="email" placeholder="Your Email" value="<%=profile_user.email%>" required>
+        <input type="file" name="avatar" placeholder="Profile Picture">
+        <input type="submit" value="update">
+    </form>
+
+
+
+
+<%}else{%>
+<!-- else show only the information -->
+    <div class="card text-right" >
+    <!-- <div class="card-header">
+        <%= user.name %> Profile
+    </div> -->
+    <div class="card-body">
+        <h5 class="card-title"><%= profile_user.name %> Profile</h5>
+        <p class="card-text">Name: <%= profile_user.name %></p>
+        <p class="card-text">Email: <%= profile_user.email %></p>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+    <!-- <div class="card-footer text-muted">
+        2 days ago
+    </div> -->
+    </div>
+<%}%>
