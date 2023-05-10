@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 // mongodb+srv://admin-dhruv:Test123@cluster0.zmald.mongodb.net/todolistDB
-// mongoose.connect("mongodb://localhost:27017/codeialDB");
-mongoose.connect("mongodb+srv://admin-dhruv:Test123@cluster0.zmald.mongodb.net/socialmediaDB");
+mongoose.connect("mongodb://localhost:27017/codeialDB");
+// mongoose.connect("mongodb+srv://admin-dhruv:Test123@cluster0.zmald.mongodb.net/socialmediaDB");
 
 const db=mongoose.connection;
 
